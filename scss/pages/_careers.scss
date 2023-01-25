@@ -1,0 +1,43 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+.careers {
+  padding: 6rem;
+  background-color: $white-light-color;
+  .main-heading {
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      line-height: 1.8;
+    }
+  }
+  .box {
+    background-color: $white-color;
+    padding: 1rem;
+    .stars {
+      i {
+        font-size: 1.5rem;
+        color: $orange-color;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      color: $black-color;
+    }
+    .person-info {
+      img {
+        width: 6rem;
+      }
+      .text {
+        h4 {
+          font-size: 1.6rem;
+          letter-spacing: 0.1rem;
+        }
+        span {
+          font-size: 1.4rem;
+          color: $black-light-color;
+        }
+      }
+    }
+  }
+}

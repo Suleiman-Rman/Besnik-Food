@@ -1,0 +1,52 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+footer {
+  padding-top: 6rem;
+  margin-top: 20rem;
+  background-color: $white-light-color;
+  .logo {
+    color: $black-color !important;
+  }
+  p {
+    font-size: 1.3rem;
+    color: $black-light-color;
+  }
+  form {
+    height: 5rem;
+    background-color: black;
+    input[type="email"] {
+      font-size: 1.4rem;
+      padding: 1rem;
+      background-color: #f3ede5;
+    }
+    input[type="submit"] {
+      background-color: $orange-color;
+      color: $white-color;
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
+      padding: 1rem;
+    }
+  }
+  ul {
+    h5 {
+      font-size: 1.7rem;
+      color: $black-color;
+    }
+    a {
+      font-size: 1.3rem;
+      color: $black-light-color !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer-bottom {
+    h2 {
+      font-size: 1.4rem;
+      margin: 3rem 0 1rem;
+      span {
+        color: $orange-color;
+      }
+    }
+  }
+}

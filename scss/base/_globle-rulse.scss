@@ -1,0 +1,88 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+// main font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none !important;
+  list-style: none;
+  text-transform: capitalize !important;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $white-color;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $orange-color;
+}
+img {
+  user-select: none;
+}
+.main-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  margin: 5rem 0;
+}
+
+.logo {
+  font-size: 2.3rem;
+  position: relative;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    right: -10px;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: $orange-color;
+    border-radius: 50%;
+  }
+}
+
+.scroll-top {
+  background: $orange-color;
+  width: fit-content;
+  position: fixed;
+  bottom: 65px;
+  right: -100px;
+  border-radius: 1rem;
+  transition: right 0.5s;
+  z-index: 9999;
+
+  &.show {
+    right: 55px;
+    @include media-breakpoint-down(md) {
+      right: 20px;
+    }
+  }
+  a {
+    padding: 1rem 1.5rem;
+    display: block;
+
+    i {
+      color: $white-color;
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+.navbar {
+  padding-block: 3rem;
+  transition: all 0.4s;
+
+  &-toggler {
+    border: none;
+    box-shadow: none;
+
+    .menu-btn {
+      font-size: 2rem;
+      color: $white-color;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    background-color: $black-color;
+    padding-block: 1.7rem;
+    .logo {
+      color: $white-color;
+    }
+  }
+  &-toggler[aria-expanded="true"] {
+    background-color: $orange-color;
+    padding: 0.5rem 1rem;
+    &.active {
+      background-color: transparent;
+      padding: 0.5rem 1rem;
+    }
+  }
+  &-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1.5rem;
+        color: $black-color !important;
+        letter-spacing: 0.1rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        @include media-breakpoint-down(lg) {
+          color: $white-color !important;
+        }
+        &:hover {
+          color: $orange-color !important;
+        }
+        &.active {
+          color: $white-color !important;
+          background-color: $orange-color !important;
+        }
+      }
+    }
+  }
+  .shop {
+    .shooping {
+      position: relative;
+      margin-top: 0.3rem;
+      &::before {
+        content: "4";
+        position: absolute;
+        top: -7px;
+        left: 9px;
+        min-width: 1.4rem;
+        min-height: 1.4rem;
+        color: $white-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange-color;
+        border-radius: 50%;
+      }
+      i {
+        color: $black-color;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 1.7rem;
+    background-color: $black-color;
+    z-index: 10000;
+
+    .menu-btn,
+    .logo,
+    .shop i {
+      color: $white-color;
+    }
+
+    .nav-item {
+      .nav-link {
+        color: $white-color !important;
+        &:hover {
+          color: $orange-color !important;
+        }
+        &.active {
+          color: $white-color !important;
+          background-color: $orange-color !important;
+        }
+      }
+    }
+  }
+}

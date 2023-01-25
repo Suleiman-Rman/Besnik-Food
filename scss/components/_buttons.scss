@@ -1,0 +1,12 @@
+@use "../colors" as *;
+
+.main-btn {
+  background-color: $orange-color;
+  transition: all 0.3s;
+  font-size: 1.5rem;
+  padding: 1.2rem 3rem;
+  border-radius: 0.5rem;
+  display: block;
+  width: fit-content;
+  color: $white-color !important;
+}

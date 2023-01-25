@@ -1,0 +1,20 @@
+@use "./custom";
+@use "./colors";
+
+// IMPORT THE BASE
+@use "base/globle-rulse";
+
+// IMPORT THE COMPONENTS
+@use "components/buttons";
+
+// IMPORT THE LAYOUT
+@use "layout/navigation";
+@use "layout/footer";
+
+// IMPORT THE PAGES
+@use "pages/home";
+@use "pages/about";
+@use "pages/services";
+@use "pages/menu";
+@use "pages/careers";
+@use "pages/contact";

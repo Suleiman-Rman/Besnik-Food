@@ -1,0 +1,25 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+.services {
+  padding: 10rem 0;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  .serv {
+    h3 {
+      font-size: 2.3rem;
+      letter-spacing: 0.1rem;
+      color: $black-color;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      padding: 0 1rem;
+      color: $black-light-color;
+    }
+  }
+}

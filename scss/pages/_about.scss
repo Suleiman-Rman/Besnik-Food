@@ -1,0 +1,31 @@
+@use"../custom" as *;
+@use "../colors" as *;
+
+.about {
+  padding: 6rem 0;
+  background-color: $white-light-color;
+  .content {
+    span {
+      font-size: 1.5rem;
+      color: $orange-color;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 3vw;
+      color: $black-color;
+      font-weight: bold;
+      @include media-breakpoint-down(sm) { 
+        font-size: 6vw;
+     }
+      @include media-breakpoint-down(md) { 
+        font-size: 6vw;
+     }
+    }
+    p {
+        font-size: 1.4rem;
+        color: $black-light-color;
+        line-height: 1.7;
+    }
+  }
+}

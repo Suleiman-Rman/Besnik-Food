@@ -1,0 +1,79 @@
+@use "../custom" as *;
+@use "../colors" as *;
+
+.home {
+  padding-top: 6rem;
+  min-height: 100vh;
+  &__info {
+    h1 {
+      font-size: 5vw;
+      font-weight: bold;
+      color: $black-color;
+      @include media-breakpoint-down(lg) {
+        font-size: 8vw;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 10vw;
+      }
+    }
+    p {
+      color: $black-color;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .categories-food {
+    .category-box {
+      background-color: #eee;
+      .info {
+        img {
+          height: 8rem;
+        }
+        h3 {
+          font-size: 2rem;
+          font-weight: 600;
+          letter-spacing: 0.1rem;
+        }
+        .stars {
+          i {
+            font-size: 1.4rem;
+            color: $orange-color;
+          }
+        }
+        .footer {
+          .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+          }
+          .icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: $orange-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            position: relative;
+            &::before {
+              content: "+";
+              width: 2rem;
+              height: 2rem;
+              color: $white-color;
+              border-radius: 50%;
+              font-size: 1.4rem;
+              background-color: $orange-color;
+              position: absolute;
+              top: -6px;
+              right: 23px;
+            }
+            i {
+              color: $white-color;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
