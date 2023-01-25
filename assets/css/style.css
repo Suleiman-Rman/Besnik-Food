@@ -10835,7 +10835,7 @@ img {
   background: #ff9302;
   width: fit-content;
   position: fixed;
-  bottom: 65px;
+  bottom: 85px;
   right: -100px;
   border-radius: 1rem;
   transition: right 0.5s;
